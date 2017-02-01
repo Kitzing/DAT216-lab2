@@ -97,7 +97,6 @@
             </AnchorPane>
             <AnchorPane id="pane5" prefHeight="400.0" prefWidth="700.0" stylesheets="@recipe_search.css">
                <children>
-                  <ListView id="pane5" prefHeight="491.0" prefWidth="700.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <AnchorPane id="pane5" layoutX="39.0" layoutY="-1.0" maxHeight="200.0" maxWidth="600.0" minHeight="179.0" minWidth="600.0" prefHeight="179.0" prefWidth="600.0" stylesheets="@recipe_search.css">
                      <children>
                         <Pane id="pane4" layoutX="230.0" layoutY="15.0" prefHeight="150.0" prefWidth="350.0" stylesheets="@recipe_search.css">
@@ -149,6 +148,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
+            <ListView id="pane5" fx:id="searchResult" prefHeight="491.0" prefWidth="700.0" stylesheets="@recipe_search.css" />
          </children>
       </StackPane>
    </children>

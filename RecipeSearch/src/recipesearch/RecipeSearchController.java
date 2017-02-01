@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -63,6 +64,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private ChoiceBox difficulty;
 
 
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cusine.setItems(FXCollections.observableArrayList("Kök","Sverige", "Asiatiskt", "Indiskt", "Grekiskt", "Afrikanskt", "Franskt"));
@@ -74,6 +76,9 @@ public class RecipeSearchController implements Initializable {
         mainIngredient.getSelectionModel().selectFirst();
         maxTime.getSelectionModel().selectFirst();
         difficulty.getSelectionModel().selectFirst();
+
+        ObservableList<String> items = FXCollections.observableArrayList("Single", "Double", "Suite");
+        searchResult.setItems(items);
 
     }
 

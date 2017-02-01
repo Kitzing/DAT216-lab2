@@ -12,7 +12,8 @@ import java.io.IOException;
 /**
  * Created by madeleine on 2017-02-01.
  */
-public class RecipeListViewCell extends ListCell{
+
+public class RecipeListViewCell extends ListCell<Recipe>{
 
 
     @FXML
@@ -26,6 +27,8 @@ public class RecipeListViewCell extends ListCell{
 
     @FXML
     private ImageView recipeImage;
+
+    private FXMLLoader mLLoader;
 
 
 
@@ -53,7 +56,7 @@ public class RecipeListViewCell extends ListCell{
 
             heading.setText(String.valueOf(recipe.getName()));
             description.setText(recipe.getDescription());
-            time.setText(recipe.getTime());
+            time.setText(recipe.getTime() + "");
             recipeImage.setImage(recipe.getFXImage());
 
             setText(null);
