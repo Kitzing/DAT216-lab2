@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="650.0" minHeight="400.0" minWidth="650.0" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="650.0" minHeight="800.0" minWidth="650.0" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
    <children>
       <MenuBar fx:id="menuBar" maxHeight="30.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <menus>
@@ -76,14 +77,40 @@
             <Separator layoutY="90.0" prefHeight="17.0" prefWidth="650.0" />
          </children>
       </AnchorPane>
-      <StackPane layoutY="131.0" prefHeight="269.0" prefWidth="650.0">
+      <StackPane layoutY="131.0" prefHeight="413.0" prefWidth="650.0">
          <children>
-            <AnchorPane prefHeight="400.0" prefWidth="650.0">
+            <AnchorPane prefHeight="400.0" prefWidth="650.0" stylesheets="@recipe_search.css">
                <children>
                   <ScrollBar layoutX="628.0" layoutY="14.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="17.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="384.0" prefWidth="650.0" stylesheets="@recipe_search.css">
+               <children>
+                  <ScrollBar layoutX="628.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="17.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0" />
+                  <ImageView fitHeight="113.0" fitWidth="156.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="196.0" layoutY="21.0" prefHeight="36.0" prefWidth="61.0" text="Rubrik">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="196.0" layoutY="62.0" text="Beskrivning" wrapText="true" />
+                  <Label layoutX="34.0" layoutY="132.0" text="Info">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="150.0" text="portioner" wrapText="true" />
+                  <Label layoutX="22.0" layoutY="255.0" text="Ingredients">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="169.0" text="svårighetsgrad" wrapText="true" />
+                  <Label layoutX="28.0" layoutY="186.0" text="tid" wrapText="true" />
+                  <Label layoutX="27.0" layoutY="205.0" text="pris" wrapText="true" />
+                  <Label layoutX="27.0" layoutY="223.0" text="kök" wrapText="true" />
+               </children>
+            </AnchorPane>
          </children>
       </StackPane>
    </children>
