@@ -33,6 +33,23 @@ public class RecipeSearchController implements Initializable {
     @FXML private MenuItem medium;
     @FXML private MenuItem hard;
     @FXML private Label maxPrice;
+    @FXML private MenuItem ten;
+    @FXML private MenuItem twenty;
+    @FXML private MenuItem thirty;
+    @FXML private MenuItem fourty;
+    @FXML private MenuItem fifty;
+    @FXML private MenuItem sixty;
+    @FXML private MenuItem seventy;
+    @FXML private MenuItem eighty;
+    @FXML private MenuItem ninety;
+    @FXML private MenuItem hundred;
+    @FXML private MenuItem hundredTen;
+    @FXML private MenuItem hundredTwenty;
+    @FXML private MenuItem hundredThirty;
+    @FXML private MenuItem hundredFourty;
+    @FXML private MenuItem hundredFifty;
+
+
 
 
     @Override
