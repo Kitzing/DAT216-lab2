@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="650.0" minHeight="800.0" minWidth="650.0" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="650.0" minHeight="400.0" minWidth="650.0" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
    <children>
       <MenuBar fx:id="menuBar" maxHeight="30.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <menus>
@@ -25,29 +25,8 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane layoutY="31.0" prefHeight="105.0" prefWidth="650.0" AnchorPane.bottomAnchor="262.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+      <AnchorPane id="pane5" layoutY="31.0" prefHeight="105.0" prefWidth="650.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="262.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
          <children>
-            <TextField layoutX="570.0" layoutY="20.0" prefHeight="27.0" prefWidth="60.0" />
-            <MenuButton layoutX="393.0" layoutY="20.0" mnemonicParsing="false" text="Max time">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="10" />
-                  <MenuItem mnemonicParsing="false" text="20" />
-                  <MenuItem mnemonicParsing="false" text="30" />
-                  <MenuItem mnemonicParsing="false" text="40" />
-                  <MenuItem mnemonicParsing="false" text="50" />
-                  <MenuItem mnemonicParsing="false" text="60" />
-                  <MenuItem mnemonicParsing="false" text="70" />
-                  <MenuItem mnemonicParsing="false" text="80" />
-                  <MenuItem mnemonicParsing="false" text="90" />
-                  <MenuItem mnemonicParsing="false" text="100" />
-                  <MenuItem mnemonicParsing="false" text="110" />
-                  <MenuItem mnemonicParsing="false" text="120" />
-                  <MenuItem mnemonicParsing="false" text="130" />
-                  <MenuItem mnemonicParsing="false" text="140" />
-                  <MenuItem mnemonicParsing="false" text="150" />
-               </items>
-            </MenuButton>
-            <Button layoutX="570.0" layoutY="64.0" mnemonicParsing="false" text="Search" />
             <MenuButton layoutX="15.0" layoutY="20.0" mnemonicParsing="false" prefWidth="91.69" text="Cusine">
               <items>
                 <MenuItem fx:id="sweden" mnemonicParsing="false" text="Sweden" />
@@ -73,52 +52,87 @@
                   <MenuItem fx:id="hard" mnemonicParsing="false" text="Hard" />
                </items>
             </MenuButton>
+            <MenuButton layoutX="393.0" layoutY="20.0" mnemonicParsing="false" text="Max time">
+               <items>
+                  <MenuItem fx:id="ten" mnemonicParsing="false" text="10" />
+                  <MenuItem fx:id="twenty" mnemonicParsing="false" text="20" />
+                  <MenuItem fx:id="thirty" mnemonicParsing="false" text="30" />
+                  <MenuItem fx:id="fourty" mnemonicParsing="false" text="40" />
+                  <MenuItem fx:id="fifty" mnemonicParsing="false" text="50" />
+                  <MenuItem fx:id="sixty" mnemonicParsing="false" text="60" />
+                  <MenuItem fx:id="seventy" mnemonicParsing="false" text="70" />
+                  <MenuItem fx:id="eighty" mnemonicParsing="false" text="80" />
+                  <MenuItem fx:id="ninety" mnemonicParsing="false" text="90" />
+                  <MenuItem fx:id="hundred" mnemonicParsing="false" text="100" />
+                  <MenuItem fx:id="hundredTen" mnemonicParsing="false" text="110" />
+                  <MenuItem fx:id="hundredTwenty" mnemonicParsing="false" text="120" />
+                  <MenuItem fx:id="hundredThirty" mnemonicParsing="false" text="130" />
+                  <MenuItem fx:id="hundredFourty" mnemonicParsing="false" text="140" />
+                  <MenuItem fx:id="hundredFifty" mnemonicParsing="false" text="150" />
+               </items>
+            </MenuButton>
             <Label layoutX="501.0" layoutY="25.0" text="Max price" />
+            <TextField layoutX="570.0" layoutY="20.0" prefHeight="27.0" prefWidth="60.0" />
+            <Button layoutX="570.0" layoutY="64.0" mnemonicParsing="false" text="Search" />
             <Separator layoutY="90.0" prefHeight="17.0" prefWidth="650.0" />
          </children>
       </AnchorPane>
-      <StackPane layoutY="131.0" prefHeight="463.0" prefWidth="650.0">
+      <StackPane layoutY="131.0" prefHeight="507.0" prefWidth="650.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="400.0" prefWidth="650.0" stylesheets="@recipe_search.css">
+            <AnchorPane id="pane5" prefHeight="400.0" prefWidth="650.0" stylesheets="@recipe_search.css">
                <children>
                   <ScrollBar layoutX="628.0" layoutY="14.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="17.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="384.0" prefWidth="650.0" stylesheets="@recipe_search.css">
+            <AnchorPane id="pane5" prefHeight="529.0" prefWidth="650.0" stylesheets="@recipe_search.css">
                <children>
                   <ScrollBar layoutX="628.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="17.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0" />
-                  <ImageView fitHeight="113.0" fitWidth="156.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label layoutX="196.0" layoutY="21.0" prefHeight="36.0" prefWidth="61.0" text="Rubrik">
+                  <ImageView fitHeight="88.0" fitWidth="150.0" layoutX="14.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane id="pane4" layoutX="14.0" layoutY="156.0" prefHeight="125.0" prefWidth="150.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="215.0" AnchorPane.topAnchor="155.0">
+                     <children>
+                        <Label layoutX="18.0" layoutY="7.0" text="Info">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="25.0" text="portioner" wrapText="true" />
+                        <Label layoutX="23.0" layoutY="44.0" text="svårighetsgrad" wrapText="true" />
+                        <Label layoutX="24.0" layoutY="81.0" text="tid" wrapText="true" />
+                        <Label layoutX="24.0" layoutY="98.0" text="kök" wrapText="true" />
+                        <Label layoutX="24.0" layoutY="61.0" text="pris" wrapText="true" />
+                     </children>
+                  </Pane>
+                  <Pane id="pane4" layoutX="186.0" layoutY="155.0" prefHeight="336.0" prefWidth="427.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="155.0">
+                     <children>
+                        <Label layoutX="35.0" layoutY="33.0" text="Instruktioer" />
+                        <Label layoutX="24.0" layoutY="14.0" text="Instruktioner">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane id="pane4" layoutX="14.0" layoutY="302.0" prefHeight="189.0" prefWidth="150.0" stylesheets="@recipe_search.css">
+                     <children>
+                        <Label layoutX="10.0" layoutY="9.0" text="Ingredients">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="29.0" text="Ingredientlista" />
+                     </children>
+                  </Pane>
+                  <Pane id="pane4" layoutX="186.0" layoutY="55.0" prefHeight="88.0" prefWidth="427.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="55.0">
+                     <children>
+                        <Label layoutX="19.0" layoutY="14.0" text="Beskrivning" wrapText="true" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="202.0" layoutY="14.0" prefHeight="36.0" prefWidth="61.0" text="Rubrik" AnchorPane.leftAnchor="202.0" AnchorPane.topAnchor="14.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold Italic" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="196.0" layoutY="62.0" text="Beskrivning" wrapText="true" />
-                  <Label layoutX="34.0" layoutY="132.0" text="Info">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="28.0" layoutY="150.0" text="portioner" wrapText="true" />
-                  <Label layoutX="22.0" layoutY="255.0" text="Ingredients">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="28.0" layoutY="169.0" text="svårighetsgrad" wrapText="true" />
-                  <Label layoutX="28.0" layoutY="186.0" text="tid" wrapText="true" />
-                  <Label layoutX="27.0" layoutY="205.0" text="pris" wrapText="true" />
-                  <Label layoutX="27.0" layoutY="223.0" text="kök" wrapText="true" />
-                  <Label layoutX="27.0" layoutY="276.0" text="Ingredientlista" />
-                  <Label layoutX="187.0" layoutY="153.0" text="Instruktioer" />
-                  <Label layoutX="182.0" layoutY="132.0" text="Instruktioner">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="509.0" layoutY="26.0" mnemonicParsing="false" text="Back to result" />
-                  <Pane layoutX="10.0" layoutY="123.0" prefHeight="334.0" prefWidth="148.0" />
-                  <Pane layoutX="168.0" layoutY="123.0" prefHeight="324.0" prefWidth="439.0" />
+                  <Button layoutX="507.0" layoutY="12.0" mnemonicParsing="false" text="Back to result" />
                </children>
             </AnchorPane>
          </children>
