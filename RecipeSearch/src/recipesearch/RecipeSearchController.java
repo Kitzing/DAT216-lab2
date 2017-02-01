@@ -13,7 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -21,9 +21,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class RecipeSearchController implements Initializable {
-    
-    @FXML private MenuBar menuBar;
-    @FXML private MenuItem sweden;
+
+
+
+    /*@FXML private MenuItem sweden;
     @FXML private MenuItem asia;
     @FXML private MenuItem india;
     @FXML private MenuItem greece;
@@ -52,7 +53,10 @@ public class RecipeSearchController implements Initializable {
     @FXML private MenuItem hundredThirty;
     @FXML private MenuItem hundredFourty;
     @FXML private MenuItem hundredFifty;
+    */
 
+    @FXML private ListView searchResult;
+    @FXML private MenuBar menuBar;
     @FXML private ChoiceBox cusine;
     @FXML private ChoiceBox mainIngredient;
     @FXML private ChoiceBox maxTime;
