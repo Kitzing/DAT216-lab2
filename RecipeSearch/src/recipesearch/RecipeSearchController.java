@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Modality;
@@ -19,7 +20,21 @@ public class RecipeSearchController implements Initializable {
     
     @FXML private MenuBar menuBar;
     @FXML private MenuItem sweden;
-    
+    @FXML private MenuItem asia;
+    @FXML private MenuItem india;
+    @FXML private MenuItem greece;
+    @FXML private MenuItem africa;
+    @FXML private MenuItem france;
+    @FXML private MenuItem meat;
+    @FXML private MenuItem fish;
+    @FXML private MenuItem chicken;
+    @FXML private MenuItem vegetables;
+    @FXML private MenuItem easy;
+    @FXML private MenuItem medium;
+    @FXML private MenuItem hard;
+    @FXML private Label maxPrice;
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
