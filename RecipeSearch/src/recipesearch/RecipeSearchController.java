@@ -1,15 +1,19 @@
 
 package recipesearch;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -49,13 +53,26 @@ public class RecipeSearchController implements Initializable {
     @FXML private MenuItem hundredFourty;
     @FXML private MenuItem hundredFifty;
 
-
+    @FXML private ChoiceBox cusine;
+    @FXML private ChoiceBox mainIngredient;
+    @FXML private ChoiceBox maxTime;
+    @FXML private ChoiceBox difficulty;
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        cusine.setItems(FXCollections.observableArrayList("Kök","Sverige", "Asiatiskt", "Indiskt", "Grekiskt", "Afrikanskt", "Franskt"));
+        mainIngredient.setItems(FXCollections.observableArrayList("Huvudingrediens","Kött", "Fisk", "Kyckling", "Vegetariskt"));
+        maxTime.setItems(FXCollections.observableArrayList("Maxtid (min)", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "110", "120", "130", "140", "150"));
+        difficulty.setItems(FXCollections.observableArrayList("Svårighetsgrad", "Lätt", "Medel", "Svårt"));
+
+        cusine.getSelectionModel().selectFirst();
+        mainIngredient.getSelectionModel().selectFirst();
+        maxTime.getSelectionModel().selectFirst();
+        difficulty.getSelectionModel().selectFirst();
+
     }
+
     
     @FXML 
     protected void openAboutActionPerformed(ActionEvent event) throws IOException{
