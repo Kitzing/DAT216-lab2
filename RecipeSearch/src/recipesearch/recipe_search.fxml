@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="400.0" maxWidth="650.0" minHeight="400.0" minWidth="650.0" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+   <children>
+      <MenuBar fx:id="menuBar" maxHeight="30.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="%fileMenu.text">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeApplicationActionPerformed" text="%exitApplicationMenuItem.text" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%helpMenu.text">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openAboutActionPerformed" text="%aboutMenuItem.text" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutY="133.0" prefHeight="266.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+         <children>
+            <ScrollBar layoutX="628.0" layoutY="14.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="17.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="14.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="31.0" prefHeight="105.0" prefWidth="650.0" AnchorPane.bottomAnchor="262.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+         <children>
+            <TextField layoutX="570.0" layoutY="20.0" prefHeight="27.0" prefWidth="60.0" />
+            <MenuButton layoutX="393.0" layoutY="20.0" mnemonicParsing="false" text="Max time">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="10" />
+                  <MenuItem mnemonicParsing="false" text="20" />
+                  <MenuItem mnemonicParsing="false" text="30" />
+                  <MenuItem mnemonicParsing="false" text="40" />
+                  <MenuItem mnemonicParsing="false" text="50" />
+                  <MenuItem mnemonicParsing="false" text="60" />
+                  <MenuItem mnemonicParsing="false" text="70" />
+                  <MenuItem mnemonicParsing="false" text="80" />
+                  <MenuItem mnemonicParsing="false" text="90" />
+                  <MenuItem mnemonicParsing="false" text="100" />
+                  <MenuItem mnemonicParsing="false" text="110" />
+                  <MenuItem mnemonicParsing="false" text="120" />
+                  <MenuItem mnemonicParsing="false" text="130" />
+                  <MenuItem mnemonicParsing="false" text="140" />
+                  <MenuItem mnemonicParsing="false" text="150" />
+               </items>
+            </MenuButton>
+            <Button layoutX="570.0" layoutY="64.0" mnemonicParsing="false" text="Search" />
+            <MenuButton layoutX="15.0" layoutY="20.0" mnemonicParsing="false" prefWidth="91.69" text="Cusine">
+              <items>
+                <MenuItem fx:id="sweden" mnemonicParsing="false" text="Sweden" />
+                <MenuItem fx:id="asia" mnemonicParsing="false" text="Asia" />
+                  <MenuItem fx:id="india" mnemonicParsing="false" text="India" />
+                  <MenuItem fx:id="greece" mnemonicParsing="false" text="Greece" />
+                  <MenuItem fx:id="africa" mnemonicParsing="false" text="Africa" />
+                  <MenuItem fx:id="france" mnemonicParsing="false" text="France" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="127.0" layoutY="20.0" mnemonicParsing="false" text="Main ingredient">
+               <items>
+                  <MenuItem fx:id="meet" mnemonicParsing="false" text="Meet" />
+                  <MenuItem fx:id="fish" mnemonicParsing="false" text="Fish" />
+                  <MenuItem fx:id="chicken" mnemonicParsing="false" text="Chicken" />
+                  <MenuItem fx:id="vegetarian" mnemonicParsing="false" text="Vegetarian" />
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="280.0" layoutY="20.0" mnemonicParsing="false" text="Difficulty">
+               <items>
+                  <MenuItem fx:id="easy" mnemonicParsing="false" text="Easy" />
+                  <MenuItem fx:id="medium" mnemonicParsing="false" text="Medium" />
+                  <MenuItem fx:id="hard" mnemonicParsing="false" text="Hard" />
+               </items>
+            </MenuButton>
+            <Label layoutX="501.0" layoutY="25.0" text="Max price" />
+            <Separator layoutY="90.0" prefHeight="17.0" prefWidth="650.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
