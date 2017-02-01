@@ -1,4 +1,4 @@
-package recipesearch;
+/* package recipesearch;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,6 +16,8 @@ import java.util.ResourceBundle;
 /**
  * Created by madeleine on 2017-02-01.
  */
+
+/*
 public class ListItemController implements Initializable {
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
@@ -103,3 +105,4 @@ public class ListItemController implements Initializable {
 
     }
 }
+ */
