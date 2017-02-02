@@ -28,8 +28,8 @@
       <AnchorPane id="pane5" layoutY="31.0" prefHeight="105.0" prefWidth="700.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="262.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
          <children>
             <Label layoutX="539.0" layoutY="30.0" text="Maxpris:" />
-            <TextField layoutX="594.0" layoutY="25.0" prefHeight="27.0" prefWidth="66.0" />
-            <Button layoutX="594.0" layoutY="63.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" text="Sök" />
+            <TextField fx:id="maxPrice" layoutX="594.0" layoutY="25.0" prefHeight="27.0" prefWidth="66.0" />
+            <Button layoutX="594.0" layoutY="63.0" mnemonicParsing="false" onAction="#searchActionPreformed" prefHeight="27.0" prefWidth="66.0" text="Sök" />
             <Separator layoutY="90.0" prefHeight="17.0" prefWidth="700.0" />
             <Label layoutX="666.0" layoutY="30.0" text="kr" />
             <ChoiceBox fx:id="cusine" layoutX="20.0" layoutY="25.0" prefHeight="27.0" prefWidth="92.0" />

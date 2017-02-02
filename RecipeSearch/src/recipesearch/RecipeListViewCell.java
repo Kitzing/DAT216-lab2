@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.ait.dat215.lab2.Recipe;
 
 import java.io.IOException;
@@ -28,6 +29,9 @@ public class RecipeListViewCell extends ListCell<Recipe>{
     @FXML
     private ImageView recipeImage;
 
+    @FXML
+    private AnchorPane anchorPane;
+
     private FXMLLoader mLLoader;
 
 
@@ -43,7 +47,7 @@ public class RecipeListViewCell extends ListCell<Recipe>{
 
         } else {
             if (mLLoader == null) {
-                mLLoader = new FXMLLoader(getClass().getResource("/fxml/ListCell.fxml"));
+                mLLoader = new FXMLLoader(getClass().getResource("ResultList.fxml"));
                 mLLoader.setController(this);
 
                 try {
@@ -60,6 +64,7 @@ public class RecipeListViewCell extends ListCell<Recipe>{
             recipeImage.setImage(recipe.getFXImage());
 
             setText(null);
+            setGraphic(anchorPane);
         }
 
     }
