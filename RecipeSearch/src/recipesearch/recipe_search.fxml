@@ -9,17 +9,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="480.0" maxWidth="740.0" minHeight="480.0" minWidth="740.0" prefHeight="480.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
+<AnchorPane id="AnchorPane" maxHeight="700.0" maxWidth="740.0" minHeight="700.0" minWidth="740.0" prefHeight="700.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recipesearch.RecipeSearchController">
    <children>
-      <StackPane layoutY="127.0" prefHeight="353.0" prefWidth="740.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="128.0">
+      <StackPane layoutY="120.0" prefHeight="550.0" prefWidth="740.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0">
          <children>
-            <ListView id="pane5" fx:id="searchResult" maxHeight="353.0" maxWidth="740.0" minHeight="353.0" minWidth="740.0" prefHeight="353.0" prefWidth="740.0" stylesheets="@recipe_search.css" />
-            <AnchorPane id="pane5" fx:id="recepieView" maxHeight="353.0" maxWidth="700.0" minHeight="353.0" minWidth="740.0" prefHeight="353.0" prefWidth="700.0" stylesheets="@recipe_search.css">
+            <AnchorPane id="pane5" fx:id="recepieView" maxHeight="577.0" maxWidth="740.0" minHeight="550.0" minWidth="740.0" prefHeight="577.0" prefWidth="740.0" stylesheets="@recipe_search.css">
                <children>
-                  <ScrollBar layoutX="628.0" orientation="VERTICAL" prefHeight="343.0" prefWidth="17.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                  <Pane id="pane4" layoutX="186.0" layoutY="155.0" prefHeight="336.0" prefWidth="427.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="155.0">
+                  <Pane id="pane4" layoutX="186.0" layoutY="160.0" prefHeight="366.0" prefWidth="517.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="160.0">
                      <children>
-                        <Label fx:id="instructionsDetail" layoutX="28.0" layoutY="33.0" prefHeight="150.0" prefWidth="468.0" text="Instruktioer" wrapText="true" />
+                        <Label fx:id="instructionsDetail" alignment="TOP_LEFT" layoutX="28.0" layoutY="33.0" prefHeight="150.0" prefWidth="468.0" text="Instruktioner" wrapText="true" />
                         <Label layoutX="24.0" layoutY="14.0" text="Instruktioner">
                            <font>
                               <Font name="System Bold" size="14.0" />
@@ -27,44 +25,45 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane id="pane4" layoutX="14.0" layoutY="302.0" prefHeight="57.0" prefWidth="150.0" stylesheets="@recipe_search.css">
+                  <Pane id="pane4" layoutX="14.0" layoutY="302.0" prefHeight="247.0" prefWidth="163.0" stylesheets="@recipe_search.css">
                      <children>
                         <Label layoutX="10.0" layoutY="9.0" text="Ingredienser">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ingredientsDetail" layoutX="20.0" layoutY="29.0" prefHeight="27.0" prefWidth="113.0" text="Ingredientlista" wrapText="true" />
+                        <Label fx:id="ingredientsDetail" alignment="TOP_LEFT" layoutX="12.0" layoutY="29.0" prefHeight="223.0" prefWidth="138.0" text="Ingredientlista" wrapText="true" />
                      </children>
                   </Pane>
-                  <Pane id="pane4" layoutX="186.0" layoutY="55.0" prefHeight="88.0" prefWidth="517.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="55.0">
+                  <Pane id="pane4" layoutX="186.0" layoutY="53.0" prefHeight="100.0" prefWidth="517.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="53.0">
                      <children>
-                        <Label fx:id="descriptionDetail" layoutX="10.0" layoutY="14.0" prefHeight="66.0" prefWidth="491.0" text="Beskrivning" wrapText="true" />
+                        <Label fx:id="descriptionDetail" alignment="TOP_LEFT" layoutX="13.0" layoutY="7.0" prefHeight="78.0" prefWidth="487.0" text="Beskrivning" wrapText="true" />
                      </children>
                   </Pane>
-                  <Label fx:id="headingDetail" layoutX="202.0" layoutY="14.0" prefHeight="36.0" prefWidth="395.0" text="Rubrik" wrapText="true" AnchorPane.leftAnchor="202.0" AnchorPane.topAnchor="14.0">
+                  <Label fx:id="headingDetail" layoutX="186.0" layoutY="11.0" prefHeight="36.0" prefWidth="444.0" text="Rubrik" wrapText="true" AnchorPane.leftAnchor="186.0" AnchorPane.topAnchor="11.0">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
                      </font>
                   </Label>
-                  <Button fx:id="back" layoutX="614.0" layoutY="19.0" mnemonicParsing="false" onAction="#backClickedActionPerformed" text="Tillbaka" />
-                  <ImageView fx:id="imageDetail" fitHeight="123.0" fitWidth="150.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
-                  <Pane id="pane4" layoutX="14.0" layoutY="154.0" prefHeight="133.0" prefWidth="150.0" stylesheets="@recipe_search.css">
+                  <Button fx:id="back" layoutX="637.0" layoutY="14.0" mnemonicParsing="false" onAction="#backClickedActionPerformed" text="Tillbaka" />
+                  <ImageView fx:id="imageDetail" fitHeight="133.0" fitWidth="163.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pane id="pane4" layoutX="14.0" layoutY="161.0" prefHeight="133.0" prefWidth="163.0" stylesheets="@recipe_search.css">
                      <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Info">
+                        <Label layoutX="14.0" layoutY="7.0" text="Info">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="portionDetail" layoutX="24.0" layoutY="29.0" text="portioner" wrapText="true" />
-                        <Label fx:id="difficultyDetail" layoutX="23.0" layoutY="48.0" text="svårighetsgrad" wrapText="true" />
-                        <Label fx:id="timeDetail" layoutX="24.0" layoutY="86.0" text="tid" wrapText="true" />
-                        <Label fx:id="cuisineDetail" layoutX="24.0" layoutY="105.0" text="kök" wrapText="true" />
-                        <Label fx:id="priceDetail" layoutX="24.0" layoutY="66.0" text="pris" wrapText="true" />
+                        <Label fx:id="portionDetail" layoutX="12.0" layoutY="29.0" text="portioner" wrapText="true" />
+                        <Label fx:id="difficultyDetail" layoutX="11.0" layoutY="48.0" text="svårighetsgrad" wrapText="true" />
+                        <Label fx:id="timeDetail" layoutX="12.0" layoutY="86.0" text="tid" wrapText="true" />
+                        <Label fx:id="cuisineDetail" layoutX="12.0" layoutY="105.0" text="kök" wrapText="true" />
+                        <Label fx:id="priceDetail" layoutX="12.0" layoutY="66.0" text="pris" wrapText="true" />
                      </children>
                   </Pane>
                </children>
             </AnchorPane>
+            <ListView id="pane5" fx:id="searchResult" maxHeight="576.0" maxWidth="740.0" minHeight="550.0" minWidth="740.0" onMouseClicked="#listClicked" prefHeight="576.0" prefWidth="740.0" stylesheets="@recipe_search.css" />
          </children>
       </StackPane>
       <MenuBar fx:id="menuBar" maxHeight="30.0" maxWidth="740.0" minHeight="30.0" minWidth="740.0" prefHeight="30.0" prefWidth="740.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -81,12 +80,12 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane id="pane5" layoutY="30.0" prefHeight="98.0" prefWidth="740.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+      <AnchorPane id="pane5" layoutY="30.0" prefHeight="95.0" prefWidth="740.0" stylesheets="@recipe_search.css" AnchorPane.bottomAnchor="576.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
          <children>
-            <Separator layoutY="90.0" prefHeight="17.0" prefWidth="740.0" />
+            <Separator layoutY="87.0" prefHeight="17.0" prefWidth="740.0" />
             <Label layoutX="568.0" layoutY="24.0" text="Maxpris:" />
             <TextField fx:id="maxPrice" layoutX="624.0" layoutY="19.0" prefHeight="27.0" prefWidth="66.0" />
-            <Button layoutX="625.0" layoutY="57.0" mnemonicParsing="false" onAction="#searchActionPreformed" prefHeight="27.0" prefWidth="66.0" text="Sök" />
+            <Button layoutX="637.0" layoutY="57.0" mnemonicParsing="false" onAction="#searchActionPreformed" prefHeight="27.0" prefWidth="66.0" text="Sök" />
             <Label layoutX="696.0" layoutY="24.0" text="kr" />
             <ChoiceBox fx:id="cusine" layoutX="34.0" layoutY="19.0" prefHeight="27.0" prefWidth="92.0" />
             <ChoiceBox fx:id="mainIngredient" layoutX="142.0" layoutY="19.0" prefHeight="27.0" prefWidth="140.0" />

@@ -29,7 +29,7 @@ import se.chalmers.ait.dat215.lab2.*;
 
 public class RecipeSearchController implements Initializable {
 
-    @FXML private ListView searchResult;
+    @FXML private ListView<Recipe> searchResult;
     @FXML private MenuBar menuBar;
     @FXML private ChoiceBox<String> cusine;
     @FXML private ChoiceBox<String> mainIngredient;
@@ -71,7 +71,7 @@ public class RecipeSearchController implements Initializable {
 
         items = FXCollections.observableArrayList();
         searchResult.setItems(items);
-        searchResult.setCellFactory(resultListView -> new RecipeListViewCell(this));
+        searchResult.setCellFactory(resultListView -> new RecipeListViewCell());
 
     }
 
@@ -94,21 +94,27 @@ public class RecipeSearchController implements Initializable {
         searchResult.toFront();
     }
 
+    @FXML
+    protected void listClicked(){
+        openRecipe(searchResult.getSelectionModel().getSelectedItem());
+
+    }
+
 
     protected void openRecipe(Recipe recipe){
         headingDetail.setText(recipe.getName());
         descriptionDetail.setText(recipe.getDescription());
-        portionDetail.setText("Portioner: " + recipe.getServings() + "");
+        portionDetail.setText("Portioner: " + recipe.getServings() + " st");
         instructionsDetail.setText("Instruktioner" + recipe.getInstruction());
         difficultyDetail.setText("Svårighetsgrad: " + recipe.getDifficulty());
-        priceDetail.setText("Pris: " + recipe.getPrice());
-        timeDetail.setText("Tid: " + recipe.getTime());
+        priceDetail.setText("Pris: " + recipe.getPrice() + " kr");
+        timeDetail.setText("Tid: " + recipe.getTime() + " min");
         cuisineDetail.setText("Kök: " + recipe.getCuisine());
-        imageDetail.setImage(recipe.getFXImage(150, 123));
+        imageDetail.setImage(recipe.getFXImage(163, 133));
 
 
         for(int i = 0; i < recipe.getIngredients().size(); i++){
-            ingredient += "•" + recipe.getIngredients().get(i) + "\n";
+            ingredient += "• " + recipe.getIngredients().get(i) + "\n";
         }
 
         ingredientsDetail.setText(ingredient);
@@ -163,5 +169,5 @@ public class RecipeSearchController implements Initializable {
         
         Stage addressBookStage = (Stage) menuBar.getScene().getWindow();
         addressBookStage.hide();
-    }    
+    }
 }

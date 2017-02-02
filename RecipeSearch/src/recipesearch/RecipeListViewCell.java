@@ -35,6 +35,7 @@ public class RecipeListViewCell extends ListCell<Recipe>{
 
     private FXMLLoader mLLoader;
 
+    /*
     private RecipeSearchController controller;
 
     private Recipe recipe1;
@@ -45,11 +46,11 @@ public class RecipeListViewCell extends ListCell<Recipe>{
 
     }
 
+*/
     @Override
     protected void updateItem(Recipe recipe, boolean empty) {
         super.updateItem(recipe, empty);
 
-        recipe1 = recipe;
 
         if(empty || recipe == null) {
 
@@ -83,9 +84,11 @@ public class RecipeListViewCell extends ListCell<Recipe>{
     }
 
 
-    @FXML protected void cellClickedActionPerformed(ActionEvent event){
+    /*
+    @FXML
+    protected void cellClickedActionPerformed(ActionEvent event){
         controller.openRecipe(recipe1);
     }
-
+*/
 
 }
