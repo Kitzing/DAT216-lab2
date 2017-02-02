@@ -106,7 +106,7 @@ public class RecipeSearchController implements Initializable {
         headingDetail.setText(name);
         descriptionDetail.setText(recipe.getDescription());
         portionDetail.setText("Portioner: " + recipe.getServings() + " st");
-        instructionsDetail.setText("Instruktioner" + recipe.getInstruction());
+        instructionsDetail.setText(recipe.getInstruction());
         difficultyDetail.setText("Svårighetsgrad: " + recipe.getDifficulty());
         priceDetail.setText("Pris: " + recipe.getPrice() + " kr");
         timeDetail.setText("Tid: " + recipe.getTime() + " min");
