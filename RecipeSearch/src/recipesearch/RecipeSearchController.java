@@ -26,39 +26,6 @@ import se.chalmers.ait.dat215.lab2.*;
 
 public class RecipeSearchController implements Initializable {
 
-
-
-    /*@FXML private MenuItem sweden;
-    @FXML private MenuItem asia;
-    @FXML private MenuItem india;
-    @FXML private MenuItem greece;
-    @FXML private MenuItem africa;
-    @FXML private MenuItem france;
-    @FXML private MenuItem meat;
-    @FXML private MenuItem fish;
-    @FXML private MenuItem chicken;
-    @FXML private MenuItem vegetables;
-    @FXML private MenuItem easy;
-    @FXML private MenuItem medium;
-    @FXML private MenuItem hard;
-    @FXML private Label maxPrice;
-    @FXML private MenuItem ten;
-    @FXML private MenuItem twenty;
-    @FXML private MenuItem thirty;
-    @FXML private MenuItem fourty;
-    @FXML private MenuItem fifty;
-    @FXML private MenuItem sixty;
-    @FXML private MenuItem seventy;
-    @FXML private MenuItem eighty;
-    @FXML private MenuItem ninety;
-    @FXML private MenuItem hundred;
-    @FXML private MenuItem hundredTen;
-    @FXML private MenuItem hundredTwenty;
-    @FXML private MenuItem hundredThirty;
-    @FXML private MenuItem hundredFourty;
-    @FXML private MenuItem hundredFifty;
-    */
-
     @FXML private ListView searchResult;
     @FXML private MenuBar menuBar;
     @FXML private ChoiceBox<String> cusine;
@@ -87,6 +54,7 @@ public class RecipeSearchController implements Initializable {
 
         items = FXCollections.observableArrayList();
         searchResult.setItems(items);
+        searchResult.setCellFactory(resultListView -> new RecipeListViewCell());
 
     }
 
@@ -95,10 +63,10 @@ public class RecipeSearchController implements Initializable {
     protected void openAboutActionPerformed(ActionEvent event) throws IOException{
     
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("recipesearch/resources/RecipeSearch");
-        Parent root = FXMLLoader.load(getClass().getResource("recipe_search_about.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("recipesearch/resources/recipe_search_about.fxml"), bundle);
         Stage aboutStage = new Stage();
         aboutStage.setScene(new Scene(root));
-        aboutStage.setTitle(bundle.getString("about.title.text"));
+        aboutStage.setTitle(bundle.getString("recipesearch/resources/about.title.text"));
         aboutStage.initModality(Modality.APPLICATION_MODAL);
         aboutStage.setResizable(false);
         aboutStage.showAndWait();
@@ -140,10 +108,16 @@ public class RecipeSearchController implements Initializable {
     protected void toObservableList(String difficultyChoice, int maxTimeInt, String cuisineChoice, int maxPriceChoice, String mainIngredientChoice){
         List<Recipe> recipes = db.search(new SearchFilter(difficultyChoice, maxTimeInt, cuisineChoice, maxPriceChoice, mainIngredientChoice));
 
+
         items.clear();
         for(int i=0; i<7; i++){
             items.add(i, recipes.get(i));
         }
+    }
+
+    protected void makeCellObject(Recipe recipe){
+
+
     }
     
     @FXML 
