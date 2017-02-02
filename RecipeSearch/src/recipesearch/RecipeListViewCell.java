@@ -1,5 +1,6 @@
 package recipesearch;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -34,11 +35,21 @@ public class RecipeListViewCell extends ListCell<Recipe>{
 
     private FXMLLoader mLLoader;
 
+    private RecipeSearchController controller;
 
+    private Recipe recipe1;
+
+
+    protected RecipeListViewCell(RecipeSearchController controller){
+        this.controller = controller;
+
+    }
 
     @Override
     protected void updateItem(Recipe recipe, boolean empty) {
         super.updateItem(recipe, empty);
+
+        recipe1 = recipe;
 
         if(empty || recipe == null) {
 
@@ -69,6 +80,11 @@ public class RecipeListViewCell extends ListCell<Recipe>{
             setGraphic(anchorPane);
         }
 
+    }
+
+
+    @FXML protected void cellClickedActionPerformed(ActionEvent event){
+        controller.openRecipe(recipe1);
     }
 
 

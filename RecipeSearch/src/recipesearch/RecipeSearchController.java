@@ -1,7 +1,7 @@
 
 package recipesearch;
 
-
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -48,6 +48,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private Label timeDetail;
     @FXML private Label cuisineDetail;
     @FXML private ImageView imageDetail;
+    private String ingredient = "";
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     ObservableList<Recipe> items;
@@ -70,7 +71,7 @@ public class RecipeSearchController implements Initializable {
 
         items = FXCollections.observableArrayList();
         searchResult.setItems(items);
-        searchResult.setCellFactory(resultListView -> new RecipeListViewCell());
+        searchResult.setCellFactory(resultListView -> new RecipeListViewCell(this));
 
     }
 
@@ -93,9 +94,24 @@ public class RecipeSearchController implements Initializable {
         searchResult.toFront();
     }
 
-    @FXML
-    protected void cellClickedActionPerformed(ActionEvent event){
 
+    protected void openRecipe(Recipe recipe){
+        headingDetail.setText(recipe.getName());
+        descriptionDetail.setText(recipe.getDescription());
+        portionDetail.setText("Portioner: " + recipe.getServings() + "");
+        instructionsDetail.setText("Instruktioner" + recipe.getInstruction());
+        difficultyDetail.setText("Svårighetsgrad: " + recipe.getDifficulty());
+        priceDetail.setText("Pris: " + recipe.getPrice());
+        timeDetail.setText("Tid: " + recipe.getTime());
+        cuisineDetail.setText("Kök: " + recipe.getCuisine());
+        imageDetail.setImage(recipe.getFXImage(150, 123));
+
+
+        for(int i = 0; i < recipe.getIngredients().size(); i++){
+            ingredient += "•" + recipe.getIngredients().get(i) + "\n";
+        }
+
+        ingredientsDetail.setText(ingredient);
 
         recepieView.toFront();
     }
@@ -139,11 +155,6 @@ public class RecipeSearchController implements Initializable {
         for(int i=0; i<7; i++){
             items.add(i, recipes.get(i));
         }
-    }
-
-    protected void makeCellObject(Recipe recipe){
-
-
     }
     
     @FXML 
