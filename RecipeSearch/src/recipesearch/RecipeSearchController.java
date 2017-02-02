@@ -102,7 +102,8 @@ public class RecipeSearchController implements Initializable {
 
 
     protected void openRecipe(Recipe recipe){
-        headingDetail.setText(recipe.getName());
+        String name = recipe.getName().replace('-', ' ');
+        headingDetail.setText(name);
         descriptionDetail.setText(recipe.getDescription());
         portionDetail.setText("Portioner: " + recipe.getServings() + " st");
         instructionsDetail.setText("Instruktioner" + recipe.getInstruction());
