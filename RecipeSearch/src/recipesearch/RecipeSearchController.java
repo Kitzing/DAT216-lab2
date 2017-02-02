@@ -118,6 +118,7 @@ public class RecipeSearchController implements Initializable {
 
     @FXML
     protected void searchActionPreformed(ActionEvent event) throws IOException{
+        searchResult.toFront();
         String cuisineChoice = cusine.getValue();
         String mainIngredientChoice = mainIngredient.getValue();
         String maxTimeChoice = maxTime.getValue();
