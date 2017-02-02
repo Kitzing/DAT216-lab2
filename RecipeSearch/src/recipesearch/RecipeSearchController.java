@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
@@ -35,6 +36,18 @@ public class RecipeSearchController implements Initializable {
     @FXML private ChoiceBox<String> difficulty;
     @FXML private TextField maxPrice;
     @FXML private AnchorPane recepieView;
+    @FXML private Button back;
+    @FXML private Label headingDetail;
+    @FXML private Label descriptionDetail;
+    @FXML private Label instructionsDetail;
+    @FXML private Label portionDetail;
+    @FXML private Label difficultyDetail;
+    @FXML private Label ingredientsDetail;
+    @FXML private Label priceDetail;
+    @FXML private Label timeDetail;
+    @FXML private Label cuisineDetail;
+    @FXML private Image imageDetail;
+
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     ObservableList<Recipe> items;
 
@@ -74,9 +87,15 @@ public class RecipeSearchController implements Initializable {
         aboutStage.showAndWait();
     }
 
+    @FXML
+    protected void backClickedActionPerformed(ActionEvent event){
+        searchResult.toFront();
+    }
 
     @FXML
     protected void cellClickedActionPerformed(ActionEvent event){
+
+
         recepieView.toFront();
     }
 
