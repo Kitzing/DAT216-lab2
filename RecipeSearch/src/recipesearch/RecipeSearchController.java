@@ -1,7 +1,7 @@
 
 package recipesearch;
 
-import java.awt.*;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -21,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -46,7 +47,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private Label priceDetail;
     @FXML private Label timeDetail;
     @FXML private Label cuisineDetail;
-    @FXML private Image imageDetail;
+    @FXML private ImageView imageDetail;
 
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     ObservableList<Recipe> items;
