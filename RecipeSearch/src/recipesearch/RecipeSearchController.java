@@ -20,6 +20,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import se.chalmers.ait.dat215.lab2.*;
@@ -33,6 +34,7 @@ public class RecipeSearchController implements Initializable {
     @FXML private ChoiceBox<String> maxTime;
     @FXML private ChoiceBox<String> difficulty;
     @FXML private TextField maxPrice;
+    @FXML private AnchorPane recepieView;
     RecipeDatabase db = RecipeDatabase.getSharedInstance();
     ObservableList<Recipe> items;
 
@@ -73,6 +75,10 @@ public class RecipeSearchController implements Initializable {
     }
 
 
+    @FXML
+    protected void cellClickedActionPerformed(ActionEvent event){
+        recepieView.toFront();
+    }
 
     @FXML
     protected void searchActionPreformed(ActionEvent event) throws IOException{
