@@ -58,7 +58,9 @@ public class RecipeListViewCell extends ListCell<Recipe>{
 
             }
 
-            heading.setText(recipe.getName());
+
+            String name = recipe.getName().replace('-', ' ');
+            heading.setText(name);
             description.setText(recipe.getDescription());
             time.setText(recipe.getTime() + "");
             recipeImage.setImage(recipe.getFXImage());
