@@ -113,7 +113,7 @@ public class RecipeSearchController implements Initializable {
         cuisineDetail.setText("Kök: " + recipe.getCuisine());
         imageDetail.setImage(recipe.getFXImage(163, 133));
 
-
+        ingredient = "";
         for(int i = 0; i < recipe.getIngredients().size(); i++){
             ingredient += "• " + recipe.getIngredients().get(i) + "\n";
         }
